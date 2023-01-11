@@ -1,0 +1,116 @@
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin: 20px 0;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 16px;
+  margin: 10px 0;
+  display: block;
+}
+
+input[type="text"],
+input[type="range"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#response {
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Style the clear button */
+button#clear {
+  /* Add some padding and a border */
+  padding: 8px 16px;
+  border: none;
+
+  /* Add some background color and a hover effect */
+  background-color: #DC143C;
+  cursor: pointer;
+
+  /* Add some font styling */
+  font-family: sans-serif;
+  font-size: 14px;
+  color: white;
+  font-weight: normal;
+}
+button#clear:hover {
+  /* Change the background color on hover */
+  background-color: #8B0000;
+}
+
+/* Style the loading prompt */
+#loading-prompt {
+  display: none; /* Hide the loading prompt by default */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Style the loading circle */
+#loading-prompt::after {
+  content: "";
+  display: block;
+  margin: 10px auto 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 6px solid #333;
+  border-color: #333 transparent #333 transparent;
+  animation: spin 1.2s linear infinite;
+}
+
+/* Add a spinning animation to the loading circle */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
